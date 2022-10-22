@@ -1,0 +1,161 @@
+html {
+    height: 99%;
+    background: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-325185.jpg&fm=jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } 
+
+body {
+    position: relative; /* First set POSITION property, ELEMENTs are then positioned using the top, bottom, left, and right properties. They also work differently depending on the POSITION value. */
+    margin: 0; 
+    padding: 0; /*padding properties are used to generate space around an element's content, inside of any defined borders*/
+    min-height: 100%;
+    width: 100%;
+}
+  
+
+* {
+    text-align: left;
+    font-family: "Comfortaa";
+} /*quello che scrivo qui dentro ("*") è l'impostazione di default, se poi vado a definire qualcosa per gli specifici delettori questo non viene applicato*/
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(240, 255, 154);
+    text-align: center;
+    border-radius: 50% 30%;
+    width: 90%;
+}
+
+p { /*posso mattere anche più di un selettore, ad esempio p, p1, h1, h3*/
+    color: rgb(4, 0, 255);
+}
+
+p1 {
+    color: rgb(0, 73, 156);
+}
+
+.boxmodel{
+    display: inline-block;
+    background-color: rgba(172, 255, 47, 0.627);
+    color: white;
+    border: 4px solid green;
+    padding: 5px 20px;
+    margin: 0px 20px 0px 30px solid red;
+    width: 42px;
+    height: 60px;
+    border-radius: 50% 80%;
+    text-align: center;
+    display:table-cell;
+    vertical-align:middle;
+    transition: all 0.2s;
+}
+
+.boxmodel:hover {
+    transform: scale(1.4)
+}
+
+.variante_omicron {
+    font-style: italic
+} /*queste sono classi, attenzione che la classe va a sovrascrivere uno stile esistente se già impsotato*/
+
+.contagiosa {
+    color:brown
+}
+
+img {
+    float: left;
+}
+
+.filler{
+    height: 26px;
+}
+
+#sca02 {
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    display: block;
+    background-color: rgba(127, 255, 212, 0.504);
+    color:rgb(0, 38, 255);
+    transition: all 0.25s;
+    width: fit-content;
+    position: absolute;
+    bottom: 0.2px;
+}
+
+footer:hover {
+    transform: scale(1.4)
+}
+
+#penziero_finale {
+    background: rgba(0, 0, 255, 0.212)
+}
+
+#djambonetto {
+    clear:both;
+}
+
+/*
+CATEGORIE
+.class
+#id (da usare con raggruppamento <div></div>)
+*
+element
+element1, element2 ---> applica a 1 e 2
+element1 element2 ---> applica a 2 contenuti in 1
+element1 > element2 ---> applica a 2 contenuti in 1 SOLO SE 2 è diretto discendente (più restrittivo del precedente)
+element1 + element2 ---> applica a 2 immediatamente consecutivi a 1
+:hover ---> applica lo stile se ci passo sopra il cursore
+:last-child ---> lo stile si applica all'ULTIMO degli elementi del gruppo di una classe (posso avere la stessa classe in più gruppi)
+:first-child ---> stesso del precedente ma al PRIMO
+!important ---> applica lo stile sovrastando ogni altro elemento della "cascata"
+
+criteri per la "vincita" nel processo a cascata di CSS
+- specificità (più è specifico, più targhetizzo)
+- importanza (quello che non bisogna usare)
+- gerarchia di sorgente (viene applicato l'ultimo )
+*/
+
+/*
+Lezione 48
+stili di testo
+
+All'interno del selettore posso impostare diverse property per modificare il testo oltre a il colore, grassetto e corsivo visto precedentemente: 
+- text-decoration: underline ---> testo sottolineato (questa property decora)
+- text-decoration: line-through ---> testo barrato
+- text-transform: uppercase ---> mette tutto il testo in lettere maiscole (questa property trarsforma)
+- line-height: 20px (interlinea, de default è 20)
+- font-style: italic (già visto)
+- font-weight: bold (è grossetto, ma plsso mettere un valore da 1 a 100)
+- font-size: 100% è la grandezza del font
+- font-family: "Times New Roman", Georgia (questo per scegliere il font che viene usato effettivamente sulla tua pagina web; tra virgolette se il nome ha più parole; viene anche specificato un secondo font qualora quello specificato non è presente nel pc di chi apre la pagina; da indagare come fare se voglio un font speciale per il mio sito)
+
+In realtà ci sono 2 modi per fare in modo che qualunque utente visualizzi il font che vogliamo quando naviga nel nostro sito (specialemtne se abbiamo un font customizzato specifico per noi):
+
+- il primo è includere il file del font nel pachetto che il server trasmette al borwser dell'untente assieme agli HTML, il CSS e il JavaScript
+
+- il secondo (più facile?) è quello di pescarlo da un sito (come fatto per le immagini ad esempio) ---> Google Font!!! Vai sulla pagina in cui spiega come usare l'API. In ogni caso bisogna sia mettere nel foglio HTML l'href per lo stile di calligrafia e poi modificare il file CSS in modo che quello stile venga usato nelle opportune sezioni.
+*/
+
+
+/*
+<span></span>
+Con questo elemento da usare le foglio HTML posso dare una particolare formattazione al testo racchiuso all'interno. Nel foglio CSS poi andrò a specificare come segue alcune carattertistiche:
+span {
+    font-size: 2(r)em;
+    scivendo così so che il testo che vado a racchiuedere all'interno sarà sempre in proporzione 2 volte quello del gruppo in cui è contenuto. Di solito infatti si ha una situazione del genere:
+    <h1>
+    Ma che bel <span>castello</span> marcon diron dirondello. Accipicchia che unido!
+    </h1>
+}
+
+*/
