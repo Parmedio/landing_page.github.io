@@ -54,14 +54,14 @@ body {
 
 .centr {
     display: flex;
-    justify-content: center; /* centra ORIZZONTALE */
-    align-items: center; /*funziona anche flex-direction: column; centra VERTICALE */
+    justify-content: center;
+    align-items: center;
 }
 
 .ref_box{
     display: flex;
     flex-direction: column;
-    justify-content: center; /* di norma centra ORIZZONTALE, siccome sto usando direction COLUMN centra VERTICALE */
+    justify-content: center;
     gap: 8px;
     max-width: 70vw;
     margin: auto;
